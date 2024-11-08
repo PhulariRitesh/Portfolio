@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,700,800,900&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    text-decoration:none;
+    border:none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #0112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 2rem 9%;
+    background:gray;
+    opacity: .95;
+    backface-visibility:visible;
+    justify-content:space-between;
+    display:flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+
+
+.navbar ul li a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: 0.5s;
+    margin-left: 4rem;
+}
+
+.navbar ul li a:hover {
+    color: var(--main-color);
+}
+
+.navbar ul li a.active {
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 2rem 6%;
+    }
+
+    .navbar ul li a {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 2rem 1%;
+    }
+
+    .navbar ul li a {
+        margin-left: 1.5rem;
+    }
+}
+
+#menuicon {
+    font-size: 3.6rem;
+    cursor: pointer;
+}
+
+#menuicon:hover {
+    color: black;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    text-emphasis-color:var(--main-color);
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .home{
+        background: url('./ritesh_phulari_.png') no-repeat;
+        background-size: contain;
+        /* background-size: cover; */
+        background-position: right center;
+        position: relative;
+        min-height: 100vh;
+        padding: 10rem 9% 2rem;
+    }
+    
+}
+
+.home-content {
+    max-width: 60rem;
+}
+
+.content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+.content h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    /* color: var(--main-color); */
+    margin-bottom: 1.5rem;
+}
+
+.content p {
+    font-size: 2rem;
+    font-weight: 500;
+    /* margin: 2rem 0 4rem; */
+    color: var(--text-color);
+    /* width: 50%; */
+    margin-bottom: 2rem;
+}
+
+.content .text-animate {
+    position: relative;
+
+}
+
+
+.text-animate h3 {
+    font-size: 2.5rem; 
+    /* text-align: center; */
+    color:transparent;
+    -webkit-text-stroke: .8px var(--main-color);
+    animation: forwards 2s text-slide 1s;
+    -o-animation: forwards 2s text-slide 1s;
+  }
+  
+
+  @media only screen and (min-width: 768px) {
+    .text-animate h3 {
+      font-size: 2rem; 
+      /* text-align: center;  */
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .text-animate h3 {
+      font-size: 2.5rem; 
+      /* text-align: center;  */
+    }
+    .content p {
+        width: 50%;
+    }
+    .home-imgHover {
+        position: absolute;
+        top: 0;
+        right:0;
+        width: 45%;
+        height: 100%;
+        background: transparent;
+        /* border: 2px solid gray; */
+        transition: 3s;
+    }
+    .home-imgHover:hover{
+        background: var(--bg-color);
+        opacity: .8;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .text-animate h3 {
+      font-size: 2.5rem; 
+      /* text-align: left;  */
+    }
+    .content p {
+        width: 100%;
+    }
+  }
+
+  .btn-box {
+    position: relative;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    justify-content: left;
+    color: var(--text-color);
+    width: 34.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+  }
+/*  */
+  .btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+    /* background: var(--main-color); */
+    border: .2rem solid var(--main-color);
+    transition: 0.5s;
+    color: var(--text-color);
+    overflow: hidden;  
+    }
+
+    .btn-box .btn:hover {
+        color:chocolate;
+        background-color: var(--text-color);
+    }
+
+    .btn-box .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:white;
+        z-index: -1;
+        transition: 0.5s;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    .btn-box .btn:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+        width: 100%;
+    }
+
+    .home-sci{
+        position: absolute;
+        bottom: 4rem;
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home-sci a i {
+        font-size: 3rem ;
+    }
+
+    .home-sci :nth-child(2) i:hover {
+        color: blue;
+    }
+
+    .home-sci :nth-child(3) i:hover {
+        color: red;
+    }
+    .home-sci :nth-child(1) i:hover {
+        color: blue;
+    }
+
+    .home-sci a i.active {
+        color: red;
+    }
+
+    .home-sci a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: .2rem solid var(--text-color);
+        border-radius: 50%;
+        font-size: 20px;
+        color: var(--text-color);
+        overflow: hidden;
+    }
+
+    .home-sci a::before {
+        content: "";
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        z-index: -1;
+        transition: transform 0.5s ease-in-out;
+        transform: scaleX(0);
+        transform-origin: center;
+    }
+    .home-sci :nth-child(2):hover::before {
+        transform: scaleX(1);
+        transform-origin: center;
+        background: yellowgreen;
+        width: 100%;
+    }
+    .home-sci :nth-child(3):hover::before {
+        transform: scaleX(1);
+        transform-origin: center;
+        background:blue;
+        width: 100%;
+    }
+    .home-sci :nth-child(2):hover::before {
+        transform: scaleX(1);
+        transform-origin: center;
+        background: orangered;
+        width: 100%;
+    }
+
+    .home-sci a:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+        width: 100%;
+    }
+
+
+  .about {
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color:#112e42;
+  }
+  
+  .heading {
+    text-align: center;
+  }
+
+  .about h2 {
+    align-items: center;
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .about-img {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  
+  .about-img img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .circle-spin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    border: 5px solid gray;
+    border-radius: 50%;
+    animation: spin 8s linear infinite;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .about-content {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .about-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #b1b1b1;
+  }
+  
+  .about-content strong {
+    font-weight: 700;
+  }
+  
+  /* Styling for the 'Projects' subsection */
+  .about-content h3 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout adjustments */
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-img {
+      margin-bottom: 30px;
+    }
+  }
+  @media (min-width: 1240px) {
+    .data {
+        /* display: flex; */
+        /* justify-content: space-between; */
+        align-items: center;
+        padding-top: 50px;
+      }
+      .Projects {
+        padding: 50px;
+      }
+      
+      .Skills {
+        padding: 60px;
+        padding-top: -50px;
+      }
+  }
+
+  
+
+  .Skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 100px; */
+    background-color:#112e42;}
+
+  .Projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 50px; */
+    background-color:#112e42;
+  }
+        
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+      th, td {
+        padding: 12px;
+        border: 1px solid #ccc;
+      }
+
+      th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+        color: #b1b1b1;
+      }
+
+      .about-content h3 {
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Styling for even table rows */
+      tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+        color: #00abf0;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        th, td {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+
+      .info p {
+        color: #ededed;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #112e42;
+      }
+
+
