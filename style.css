@@ -455,7 +455,7 @@ section {
         padding: 50px;
       }
       
-      .Skills {
+      .Skills, .Education {
         padding: 60px;
         padding-top: -50px;
       }
@@ -471,6 +471,14 @@ section {
     background-color:#112e42;}
 
   .Projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 50px; */
+    background-color:#112e42;
+  }
+
+  .Education {
     display: flex;
     justify-content: space-between;
     align-items: center;
